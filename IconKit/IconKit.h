@@ -2,8 +2,8 @@
 //  IconKit.h
 //  IconKit
 //
-//  Created by Xiao Yao on 8/25/15.
-//  Copyright (c) 2015 Xiao Yao. All rights reserved.
+//  Copyright (C) 2015 Xiao Yao. All Rights Reserved.
+//  See LICENSE.txt for more information.
 //
 
 #import <UIKit/UIKit.h>
