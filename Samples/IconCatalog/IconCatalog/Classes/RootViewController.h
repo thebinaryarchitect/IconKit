@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  IconCatalog
 //
 //  Copyright (C) 2015 Xiao Yao. All Rights Reserved.
@@ -8,12 +8,10 @@
 
 @import UIKit;
 
-#pragma mark - ViewController
+#pragma mark - RootViewController
 
 #pragma mark - Public Interface
 
-@interface ViewController : UINavigationController
-
+@interface RootViewController : UICollectionViewController
 
 @end
-

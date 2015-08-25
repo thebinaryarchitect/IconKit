@@ -14,6 +14,8 @@
 		137C25AD1B8D286700CFB7F8 /* IconCatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25AC1B8D286700CFB7F8 /* IconCatalogTests.m */; };
 		137C25BF1B8D28FA00CFB7F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25B81B8D28FA00CFB7F8 /* AppDelegate.m */; };
 		137C25C01B8D28FA00CFB7F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25BA1B8D28FA00CFB7F8 /* ViewController.m */; };
+		137C25CB1B8D2E8900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */; };
+		137C25CE1B8D2EA000CFB7F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		137C25B81B8D28FA00CFB7F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		137C25B91B8D28FA00CFB7F8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		137C25BA1B8D28FA00CFB7F8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		137C25C61B8D2E8900CFB7F8 /* IconKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconKit.h; sourceTree = "<group>"; };
+		137C25C81B8D2E8900CFB7F8 /* TBAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAIconView.h; sourceTree = "<group>"; };
+		137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAIconView.m; sourceTree = "<group>"; };
+		137C25CC1B8D2EA000CFB7F8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 		137C25841B8D286700CFB7F8 = {
 			isa = PBXGroup;
 			children = (
+				137C25C51B8D2E8900CFB7F8 /* IconKit */,
 				137C258F1B8D286700CFB7F8 /* IconCatalog */,
 				137C25A91B8D286700CFB7F8 /* IconCatalogTests */,
 				137C258E1B8D286700CFB7F8 /* Products */,
@@ -122,6 +130,8 @@
 			children = (
 				137C25B71B8D28FA00CFB7F8 /* AppDelegate.h */,
 				137C25B81B8D28FA00CFB7F8 /* AppDelegate.m */,
+				137C25CC1B8D2EA000CFB7F8 /* RootViewController.h */,
+				137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */,
 				137C25B91B8D28FA00CFB7F8 /* ViewController.h */,
 				137C25BA1B8D28FA00CFB7F8 /* ViewController.m */,
 			);
@@ -157,6 +167,17 @@
 			children = (
 			);
 			path = Graphics;
+			sourceTree = "<group>";
+		};
+		137C25C51B8D2E8900CFB7F8 /* IconKit */ = {
+			isa = PBXGroup;
+			children = (
+				137C25C61B8D2E8900CFB7F8 /* IconKit.h */,
+				137C25C81B8D2E8900CFB7F8 /* TBAIconView.h */,
+				137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */,
+			);
+			name = IconKit;
+			path = ../../IconKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +283,8 @@
 				137C25C01B8D28FA00CFB7F8 /* ViewController.m in Sources */,
 				137C25BF1B8D28FA00CFB7F8 /* AppDelegate.m in Sources */,
 				137C25931B8D286700CFB7F8 /* main.m in Sources */,
+				137C25CB1B8D2E8900CFB7F8 /* TBAIconView.m in Sources */,
+				137C25CE1B8D2EA000CFB7F8 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +481,7 @@
 				137C25B21B8D286700CFB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		137C25B31B8D286700CFB7F8 /* Build configuration list for PBXNativeTarget "IconCatalogTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +490,7 @@
 				137C25B51B8D286700CFB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
