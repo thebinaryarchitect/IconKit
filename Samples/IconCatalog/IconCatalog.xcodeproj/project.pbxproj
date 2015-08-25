@@ -16,6 +16,7 @@
 		137C25C01B8D28FA00CFB7F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25BA1B8D28FA00CFB7F8 /* ViewController.m */; };
 		137C25CB1B8D2E8900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */; };
 		137C25CE1B8D2EA000CFB7F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */; };
+		137C25D21B8D33B700CFB7F8 /* TBAIconCrossMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAIconView.m; sourceTree = "<group>"; };
 		137C25CC1B8D2EA000CFB7F8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCrossMark.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				137C25C61B8D2E8900CFB7F8 /* IconKit.h */,
 				137C25C81B8D2E8900CFB7F8 /* TBAIconView.h */,
 				137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */,
+				137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */,
 			);
 			name = IconKit;
 			path = ../../IconKit;
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C259C1B8D286700CFB7F8 /* Main.storyboard in Resources */,
+				137C25D21B8D33B700CFB7F8 /* TBAIconCrossMark.plist in Resources */,
 				137C25A11B8D286700CFB7F8 /* LaunchScreen.xib in Resources */,
 				137C259E1B8D286700CFB7F8 /* Images.xcassets in Resources */,
 			);

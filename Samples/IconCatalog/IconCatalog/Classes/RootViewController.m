@@ -8,7 +8,35 @@
 
 #import "RootViewController.h"
 
+#pragma mark - _IconCell
+
+#pragma mark - Private Interface
+
+@interface _IconCell : UICollectionViewCell
+@end
+
+#pragma mark - Private Implementation
+
+@implementation _IconCell
+
+#pragma mark Lifecycle
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
+    return self;
+}
+
+@end
+
 #pragma mark - RootViewController
+
+#pragma mark - Private Interface
+
+@interface RootViewController()
+@end
 
 #pragma mark - Public Implementation
 
@@ -26,6 +54,43 @@
         
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    
+    [self.collectionView registerClass:[_IconCell class] forCellWithReuseIdentifier:NSStringFromClass([_IconCell class])];
+    [self updateLayout:self.collectionView.frame.size];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [self updateLayout:size];
+}
+
+#pragma mark Private
+
+- (void)updateLayout:(CGSize)size {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    CGFloat width = size.width / 4.0;
+    layout.itemSize = CGSizeMake(width - 1.0, width - 1.0);
+    [self.collectionView reloadData];
+}
+
+#pragma mark UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 24;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    _IconCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([_IconCell class]) forIndexPath:indexPath];
+    return cell;
 }
 
 @end
