@@ -12,6 +12,7 @@
 		137C257B1B8D269D00CFB7F8 /* IconKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C257A1B8D269D00CFB7F8 /* IconKitTests.m */; };
 		137C25C31B8D293900CFB7F8 /* TBAIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 137C25C11B8D293900CFB7F8 /* TBAIconView.h */; };
 		137C25C41B8D293900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C21B8D293900CFB7F8 /* TBAIconView.m */; };
+		137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		137C257A1B8D269D00CFB7F8 /* IconKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconKitTests.m; sourceTree = "<group>"; };
 		137C25C11B8D293900CFB7F8 /* TBAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAIconView.h; sourceTree = "<group>"; };
 		137C25C21B8D293900CFB7F8 /* TBAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAIconView.m; sourceTree = "<group>"; };
+		137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCrossMark.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				137C256D1B8D269D00CFB7F8 /* IconKit.h */,
 				137C25C11B8D293900CFB7F8 /* TBAIconView.h */,
 				137C25C21B8D293900CFB7F8 /* TBAIconView.m */,
+				137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */,
 				137C256B1B8D269D00CFB7F8 /* Supporting Files */,
 			);
 			path = IconKit;
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

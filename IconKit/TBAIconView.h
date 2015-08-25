@@ -67,4 +67,6 @@ typedef NS_ENUM(NSInteger, TBAIconViewBorderType){
  */
 - (instancetype)initWithCenter:(CGPoint)center radius:(CGFloat)radius;
 
++ (TBAIconView *)crossMarkIconView;
+
 @end

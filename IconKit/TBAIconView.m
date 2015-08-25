@@ -10,9 +10,23 @@
 
 #pragma mark - TBAIconView
 
+#pragma mark - Private Interface
+
+@interface TBAIconView()
+@property (nonatomic, strong, readwrite) NSMutableArray *bezierPaths;
+@end
+
 #pragma mark - Public Implementation
 
 @implementation TBAIconView
+
+#pragma mark Class Methods
+
++ (TBAIconView *)crossMarkIconView {
+    TBAIconView *iconView = [[TBAIconView  alloc] initWithCenter:CGPointZero radius:30.0];
+    [iconView updateDataSource:@"TBAIconCrossMark"];
+    return iconView;
+}
 
 #pragma mark Lifecycle
 
@@ -30,6 +44,19 @@
     return self;
 }
 
+#pragma mark Drawing
+
+- (void)drawRect:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    for (UIBezierPath *bPath in self.bezierPaths) {
+        CGPathRef path = bPath.CGPath;
+        CGContextAddPath(context, path);
+    }
+    CGContextSetLineWidth(context, self.lineWidth);
+    [self.strokeColor setStroke];
+    CGContextStrokePath(context);
+}
+
 #pragma mark Property Overrides
 
 - (void)setRadius:(CGFloat)radius {
@@ -44,6 +71,30 @@
 
 - (CGRect)calculateFrameWithCenter:(CGPoint)center radius:(CGFloat)radius {
     return CGRectMake(center.x-radius, center.y-radius, 2*radius, 2*radius);
+}
+
+- (void)updateDataSource:(NSString *)identifier {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:identifier ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
+    NSString *version = dict[@"version"];
+    if ([version isEqualToString:@"1.0.0"]) {
+        NSArray *geometry = dict[@"geometry"];
+        NSMutableArray *bezierPaths = [NSMutableArray array];
+        for (NSArray *pointStrings in geometry) {
+            UIBezierPath *path = [UIBezierPath bezierPath];
+            for (NSString *pointString in pointStrings) {
+                CGPoint point = CGPointFromString(pointString);
+                if ([pointString isEqual:pointStrings.firstObject]) {
+                    [path moveToPoint:point];
+                } else {
+                    [path addLineToPoint:point];
+                }
+            }
+            [bezierPaths addObject:path];
+        }
+        self.bezierPaths = bezierPaths;
+    }
+    [self setNeedsDisplay];
 }
 
 @end
