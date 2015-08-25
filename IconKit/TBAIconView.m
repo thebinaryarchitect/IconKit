@@ -21,6 +21,11 @@
     self = [super initWithFrame:frame];
     if (self) {
         _radius = radius;
+        _borderType = TBAIconViewBorderTypeNone;
+        _fillColor = [UIColor whiteColor];
+        _strokeColor = [UIColor blackColor];
+        _lineWidth = 2.0;
+        _applyFill = NO;
     }
     return self;
 }
