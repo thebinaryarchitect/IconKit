@@ -10,6 +10,8 @@
 		137C256E1B8D269D00CFB7F8 /* IconKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 137C256D1B8D269D00CFB7F8 /* IconKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		137C25741B8D269D00CFB7F8 /* IconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C25681B8D269D00CFB7F8 /* IconKit.framework */; };
 		137C257B1B8D269D00CFB7F8 /* IconKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C257A1B8D269D00CFB7F8 /* IconKitTests.m */; };
+		137C25C31B8D293900CFB7F8 /* TBAIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 137C25C11B8D293900CFB7F8 /* TBAIconView.h */; };
+		137C25C41B8D293900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C21B8D293900CFB7F8 /* TBAIconView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		137C25731B8D269D00CFB7F8 /* IconKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IconKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		137C25791B8D269D00CFB7F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137C257A1B8D269D00CFB7F8 /* IconKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconKitTests.m; sourceTree = "<group>"; };
+		137C25C11B8D293900CFB7F8 /* TBAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAIconView.h; sourceTree = "<group>"; };
+		137C25C21B8D293900CFB7F8 /* TBAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAIconView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				137C256D1B8D269D00CFB7F8 /* IconKit.h */,
+				137C25C11B8D293900CFB7F8 /* TBAIconView.h */,
+				137C25C21B8D293900CFB7F8 /* TBAIconView.m */,
 				137C256B1B8D269D00CFB7F8 /* Supporting Files */,
 			);
 			path = IconKit;
@@ -109,6 +115,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137C25C31B8D293900CFB7F8 /* TBAIconView.h in Headers */,
 				137C256E1B8D269D00CFB7F8 /* IconKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137C25C41B8D293900CFB7F8 /* TBAIconView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
