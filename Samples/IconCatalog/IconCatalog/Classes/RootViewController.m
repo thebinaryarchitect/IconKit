@@ -98,7 +98,7 @@
     self.toolbarItems = items;
     self.navigationController.toolbarHidden = NO;
     
-    NSArray *segItems = @[@"None", @"Square"];
+    NSArray *segItems = @[@"None", @"Square", @"Circle"];
     UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:segItems];
     for (NSInteger i=0; i<segControl.numberOfSegments; i++) {
         [segControl setWidth:100.0 forSegmentAtIndex:i];

@@ -54,9 +54,14 @@ NSString *const TBAIconIdentifierCheckMark = @"TBAIconCheckMark";
     CGContextSetLineWidth(context, self.lineWidth);
     [self.strokeColor setStroke];
     
+    CGRect bounds = CGRectInset(rect, self.lineWidth, self.lineWidth);
     switch (self.borderType) {
         case TBAIconViewBorderTypeSquare: {
-            CGContextStrokeRect(context, rect);
+            CGContextStrokeRect(context, bounds);
+            break;
+        }
+        case TBAIconViewBorderTypeCircle: {
+            CGContextStrokeEllipseInRect(context, bounds);
             break;
         }
         default:
