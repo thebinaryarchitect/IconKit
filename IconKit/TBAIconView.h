@@ -62,15 +62,6 @@ extern NSString *const TBAIconIdentifierPlus;
 @property (nonatomic, strong, readwrite) UIColor *fillColor;
 
 /**
- *  The designated initializer.
- *
- *  @param center The identifier.
- *
- *  @return TBAIconView object.
- */
-- (instancetype)initWithIdentifier:(NSString *)identifier;
-
-/**
  *  Causes the view to redraw with the icon associated with the identifier.
  *
  *  @param identifier The identifier.

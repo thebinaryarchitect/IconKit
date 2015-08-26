@@ -27,14 +27,6 @@ NSString *const TBAIconIdentifierPlus = @"TBAIconPlus";
 #pragma mark Lifecycle
 
 - (instancetype)init {
-    return [self initWithIdentifier:TBAIconIdentifierCrossMark];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    return [self initWithIdentifier:TBAIconIdentifierCrossMark];
-}
-
-- (instancetype)initWithIdentifier:(NSString *)identifier {
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -45,8 +37,6 @@ NSString *const TBAIconIdentifierPlus = @"TBAIconPlus";
         _strokeColor = [UIColor blackColor];
         _lineWidth = 2.0;
         _applyFill = NO;
-        
-        [self updateDataSource:identifier];
     }
     return self;
 }
