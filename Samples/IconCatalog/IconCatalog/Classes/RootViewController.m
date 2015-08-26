@@ -13,6 +13,7 @@
 #pragma mark - Private Interface
 
 @interface _IconCell : UICollectionViewCell
+@property (nonatomic, strong, readwrite) TBAIconView *iconView;
 @end
 
 #pragma mark - Private Implementation
@@ -25,6 +26,18 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
+    
+        TBAIconView *iconView = [TBAIconView crossMarkIconView];
+        iconView.translatesAutoresizingMaskIntoConstraints = NO;
+        iconView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        [self.contentView addSubview:iconView];
+        self.iconView = iconView;
+        
+        [NSLayoutConstraint autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
+            [iconView autoCenterInSuperview];
+            [iconView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:iconView];
+            [iconView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.contentView withMultiplier:0.5];
+        }];
     }
     return self;
 }
