@@ -68,14 +68,18 @@ NSString *const TBAIconIdentifierLeftArrow = @"TBAIconLeftArrow";
     if ([version isEqualToString:@"1.0.0"]) {
         NSArray *geometry = dict[@"geometry"];
         NSMutableArray *bezierPaths = [NSMutableArray array];
-        for (NSArray *pointStrings in geometry) {
+        for (NSDictionary *infoDict in geometry) {
+            NSString *type = infoDict[@"type"];
             UIBezierPath *path = [UIBezierPath bezierPath];
-            for (NSString *pointString in pointStrings) {
-                CGPoint point = CGPointFromString(pointString);
-                if ([pointString isEqual:pointStrings.firstObject]) {
-                    [path moveToPoint:point];
-                } else {
-                    [path addLineToPoint:point];
+            if ([type isEqualToString:@"points"]) {
+                NSArray *pointStrings = infoDict[@"values"];
+                for (NSString *pointString in pointStrings) {
+                    CGPoint point = CGPointFromString(pointString);
+                    if ([pointString isEqual:pointStrings.firstObject]) {
+                        [path moveToPoint:point];
+                    } else {
+                        [path addLineToPoint:point];
+                    }
                 }
             }
             [bezierPaths addObject:path];

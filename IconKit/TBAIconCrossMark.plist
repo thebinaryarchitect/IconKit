@@ -6,14 +6,24 @@
 	<string>1.0.0</string>
 	<key>geometry</key>
 	<array>
-		<array>
-			<string>{0.0, 0.0}</string>
-			<string>{1.0, 1.0}</string>
-		</array>
-		<array>
-			<string>{1.0, 0.0}</string>
-			<string>{0.0, 1.0}</string>
-		</array>
+		<dict>
+			<key>type</key>
+			<string>points</string>
+			<key>values</key>
+			<array>
+				<string>{0.0, 0.0}</string>
+				<string>{1.0, 1.0}</string>
+			</array>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>points</string>
+			<key>values</key>
+			<array>
+				<string>{1.0, 0.0}</string>
+				<string>{0.0, 1.0}</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
