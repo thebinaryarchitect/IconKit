@@ -17,6 +17,8 @@
 		137C25CB1B8D2E8900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */; };
 		137C25CE1B8D2EA000CFB7F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */; };
 		137C25D21B8D33B700CFB7F8 /* TBAIconCrossMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */; };
+		137C25DC1B8D44F500CFB7F8 /* TBAIconMinus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25DA1B8D44F500CFB7F8 /* TBAIconMinus.plist */; };
+		137C25DD1B8D44F500CFB7F8 /* TBAIconPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25DB1B8D44F500CFB7F8 /* TBAIconPlus.plist */; };
 		635C47C6AF1A53C1E8F60E3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7D270DEB92D90C0D5D6217 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		137C25CC1B8D2EA000CFB7F8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		137C25CD1B8D2EA000CFB7F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCrossMark.plist; sourceTree = "<group>"; };
+		137C25DA1B8D44F500CFB7F8 /* TBAIconMinus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconMinus.plist; sourceTree = "<group>"; };
+		137C25DB1B8D44F500CFB7F8 /* TBAIconPlus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconPlus.plist; sourceTree = "<group>"; };
 		1F3696E0EDEE899F79694B61 /* Pods.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribution.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribution.xcconfig"; sourceTree = "<group>"; };
 		503DBAE00B0F207DCF2FFA60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF7D270DEB92D90C0D5D6217 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +190,8 @@
 				137C25C81B8D2E8900CFB7F8 /* TBAIconView.h */,
 				137C25C91B8D2E8900CFB7F8 /* TBAIconView.m */,
 				137C25D11B8D33B700CFB7F8 /* TBAIconCrossMark.plist */,
+				137C25DA1B8D44F500CFB7F8 /* TBAIconMinus.plist */,
+				137C25DB1B8D44F500CFB7F8 /* TBAIconPlus.plist */,
 			);
 			name = IconKit;
 			path = ../../IconKit;
@@ -292,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C259C1B8D286700CFB7F8 /* Main.storyboard in Resources */,
+				137C25DC1B8D44F500CFB7F8 /* TBAIconMinus.plist in Resources */,
 				137C25D21B8D33B700CFB7F8 /* TBAIconCrossMark.plist in Resources */,
 				137C25A11B8D286700CFB7F8 /* LaunchScreen.xib in Resources */,
 				137C259E1B8D286700CFB7F8 /* Images.xcassets in Resources */,
+				137C25DD1B8D44F500CFB7F8 /* TBAIconPlus.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

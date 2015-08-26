@@ -48,6 +48,7 @@
 #pragma mark - Private Interface
 
 @interface RootViewController()
+@property (nonatomic, readwrite, readwrite) NSArray *iconIDs;
 @end
 
 #pragma mark - Public Implementation
@@ -63,7 +64,7 @@
     layout.minimumLineSpacing = 1.0;
     self = [super initWithCollectionViewLayout:layout];
     if (self) {
-        
+        self.iconIDs = @[TBAIconIdentifierCrossMark, TBAIconIdentifierPlus, TBAIconIdentifierMinus];
     }
     return self;
 }
@@ -97,11 +98,13 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 24;
+    return self.iconIDs.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     _IconCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([_IconCell class]) forIndexPath:indexPath];
+    NSString *iconID = self.iconIDs[indexPath.row];
+    [cell.iconView updateDataSource:iconID];
     return cell;
 }
 
