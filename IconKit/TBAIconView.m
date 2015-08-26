@@ -18,16 +18,18 @@
 
 #pragma mark - Public Implementation
 
+NSString *const TBAIconIdentifierCrossMark = @"TBAIconCrossMark";
+
 @implementation TBAIconView
 
 #pragma mark Lifecycle
 
 - (instancetype)init {
-    return [self initWithIdentifier:@"TBAIconCrossMark"];
+    return [self initWithIdentifier:TBAIconIdentifierCrossMark];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    return [self initWithIdentifier:@"TBAIconCrossMark"];
+    return [self initWithIdentifier:TBAIconIdentifierCrossMark];
 }
 
 - (instancetype)initWithIdentifier:(NSString *)identifier {
