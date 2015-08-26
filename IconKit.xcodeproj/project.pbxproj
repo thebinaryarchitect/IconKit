@@ -15,6 +15,7 @@
 		137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */; };
 		137C25D71B8D443800CFB7F8 /* TBAIconPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */; };
 		137C25D91B8D44A700CFB7F8 /* TBAIconMinus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25D81B8D44A700CFB7F8 /* TBAIconMinus.plist */; };
+		137C25DF1B8D474700CFB7F8 /* TBAIconLeftArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25DE1B8D474700CFB7F8 /* TBAIconLeftArrow.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCrossMark.plist; sourceTree = "<group>"; };
 		137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconPlus.plist; sourceTree = "<group>"; };
 		137C25D81B8D44A700CFB7F8 /* TBAIconMinus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconMinus.plist; sourceTree = "<group>"; };
+		137C25DE1B8D474700CFB7F8 /* TBAIconLeftArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconLeftArrow.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */,
 				137C25D81B8D44A700CFB7F8 /* TBAIconMinus.plist */,
 				137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */,
+				137C25DE1B8D474700CFB7F8 /* TBAIconLeftArrow.plist */,
 				137C256B1B8D269D00CFB7F8 /* Supporting Files */,
 			);
 			path = IconKit;
@@ -210,6 +213,7 @@
 			files = (
 				137C25D91B8D44A700CFB7F8 /* TBAIconMinus.plist in Resources */,
 				137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */,
+				137C25DF1B8D474700CFB7F8 /* TBAIconLeftArrow.plist in Resources */,
 				137C25D71B8D443800CFB7F8 /* TBAIconPlus.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

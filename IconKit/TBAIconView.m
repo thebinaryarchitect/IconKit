@@ -21,6 +21,7 @@
 NSString *const TBAIconIdentifierCrossMark = @"TBAIconCrossMark";
 NSString *const TBAIconIdentifierMinus = @"TBAIconMinus";
 NSString *const TBAIconIdentifierPlus = @"TBAIconPlus";
+NSString *const TBAIconIdentifierLeftArrow = @"TBAIconLeftArrow";
 
 @implementation TBAIconView
 
