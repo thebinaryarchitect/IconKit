@@ -64,7 +64,7 @@
     layout.minimumLineSpacing = 1.0;
     self = [super initWithCollectionViewLayout:layout];
     if (self) {
-        self.iconIDs = @[TBAIconIdentifierCrossMark, TBAIconIdentifierPlus, TBAIconIdentifierMinus, TBAIconIdentifierLeftArrow];
+        self.iconIDs = @[TBAIconIdentifierCrossMark, TBAIconIdentifierPlus, TBAIconIdentifierMinus, TBAIconIdentifierLeftArrow, TBAIconIdentifierRightArrow];
     }
     return self;
 }
