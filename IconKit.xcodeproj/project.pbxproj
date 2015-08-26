@@ -19,6 +19,7 @@
 		137C25E31B8D495B00CFB7F8 /* TBAIconRightArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25E21B8D495B00CFB7F8 /* TBAIconRightArrow.plist */; };
 		137C25E71B8D49C400CFB7F8 /* TBAIconUpArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25E61B8D49C400CFB7F8 /* TBAIconUpArrow.plist */; };
 		137C25ED1B8D4A7500CFB7F8 /* TBAIconDownArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25EC1B8D4A7500CFB7F8 /* TBAIconDownArrow.plist */; };
+		137C25F11B8D4B3400CFB7F8 /* TBAIconCheckMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25F01B8D4B3400CFB7F8 /* TBAIconCheckMark.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		137C25E21B8D495B00CFB7F8 /* TBAIconRightArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconRightArrow.plist; sourceTree = "<group>"; };
 		137C25E61B8D49C400CFB7F8 /* TBAIconUpArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconUpArrow.plist; sourceTree = "<group>"; };
 		137C25EC1B8D4A7500CFB7F8 /* TBAIconDownArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconDownArrow.plist; sourceTree = "<group>"; };
+		137C25F01B8D4B3400CFB7F8 /* TBAIconCheckMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCheckMark.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				137C25E21B8D495B00CFB7F8 /* TBAIconRightArrow.plist */,
 				137C25E61B8D49C400CFB7F8 /* TBAIconUpArrow.plist */,
 				137C25EC1B8D4A7500CFB7F8 /* TBAIconDownArrow.plist */,
+				137C25F01B8D4B3400CFB7F8 /* TBAIconCheckMark.plist */,
 				137C256B1B8D269D00CFB7F8 /* Supporting Files */,
 			);
 			path = IconKit;
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C25E71B8D49C400CFB7F8 /* TBAIconUpArrow.plist in Resources */,
+				137C25F11B8D4B3400CFB7F8 /* TBAIconCheckMark.plist in Resources */,
 				137C25D91B8D44A700CFB7F8 /* TBAIconMinus.plist in Resources */,
 				137C25E31B8D495B00CFB7F8 /* TBAIconRightArrow.plist in Resources */,
 				137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */,

@@ -23,6 +23,7 @@
 		137C25E51B8D499100CFB7F8 /* TBAIconRightArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25E41B8D499100CFB7F8 /* TBAIconRightArrow.plist */; };
 		137C25E91B8D4A1A00CFB7F8 /* TBAIconUpArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25E81B8D4A1A00CFB7F8 /* TBAIconUpArrow.plist */; };
 		137C25EF1B8D4AD800CFB7F8 /* TBAIconDownArrow.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25EE1B8D4AD800CFB7F8 /* TBAIconDownArrow.plist */; };
+		137C25F31B8D4B6900CFB7F8 /* TBAIconCheckMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25F21B8D4B6900CFB7F8 /* TBAIconCheckMark.plist */; };
 		635C47C6AF1A53C1E8F60E3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7D270DEB92D90C0D5D6217 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		137C25E41B8D499100CFB7F8 /* TBAIconRightArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconRightArrow.plist; sourceTree = "<group>"; };
 		137C25E81B8D4A1A00CFB7F8 /* TBAIconUpArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconUpArrow.plist; sourceTree = "<group>"; };
 		137C25EE1B8D4AD800CFB7F8 /* TBAIconDownArrow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconDownArrow.plist; sourceTree = "<group>"; };
+		137C25F21B8D4B6900CFB7F8 /* TBAIconCheckMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCheckMark.plist; sourceTree = "<group>"; };
 		1F3696E0EDEE899F79694B61 /* Pods.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribution.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribution.xcconfig"; sourceTree = "<group>"; };
 		503DBAE00B0F207DCF2FFA60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF7D270DEB92D90C0D5D6217 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +206,7 @@
 				137C25E41B8D499100CFB7F8 /* TBAIconRightArrow.plist */,
 				137C25E81B8D4A1A00CFB7F8 /* TBAIconUpArrow.plist */,
 				137C25EE1B8D4AD800CFB7F8 /* TBAIconDownArrow.plist */,
+				137C25F21B8D4B6900CFB7F8 /* TBAIconCheckMark.plist */,
 			);
 			name = IconKit;
 			path = ../../IconKit;
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C25E91B8D4A1A00CFB7F8 /* TBAIconUpArrow.plist in Resources */,
+				137C25F31B8D4B6900CFB7F8 /* TBAIconCheckMark.plist in Resources */,
 				137C25EF1B8D4AD800CFB7F8 /* TBAIconDownArrow.plist in Resources */,
 				137C25E11B8D477900CFB7F8 /* TBAIconLeftArrow.plist in Resources */,
 				137C259C1B8D286700CFB7F8 /* Main.storyboard in Resources */,
