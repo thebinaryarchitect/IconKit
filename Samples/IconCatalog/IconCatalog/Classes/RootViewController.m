@@ -27,7 +27,7 @@
     if (self) {
         self.contentView.backgroundColor = [UIColor whiteColor];
     
-        TBAIconView *iconView = [TBAIconView crossMarkIconView];
+        TBAIconView *iconView = [[TBAIconView alloc] initWithIdentifier:@"TBAIconCrossMark"];
         iconView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:iconView];
         self.iconView = iconView;

@@ -60,13 +60,10 @@ typedef NS_ENUM(NSInteger, TBAIconViewBorderType){
 /**
  *  The designated initializer.
  *
- *  @param center The center of the view.
- *  @param radius The radius of the view.
+ *  @param center The identifier.
  *
  *  @return TBAIconView object.
  */
-- (instancetype)initWithCenter:(CGPoint)center radius:(CGFloat)radius;
-
-+ (TBAIconView *)crossMarkIconView;
+- (instancetype)initWithIdentifier:(NSString *)identifier;
 
 @end

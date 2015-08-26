@@ -20,29 +20,21 @@
 
 @implementation TBAIconView
 
-#pragma mark Class Methods
-
-+ (TBAIconView *)crossMarkIconView {
-    TBAIconView *iconView = [[TBAIconView  alloc] initWithCenter:CGPointZero radius:0.0];
-    [iconView updateDataSource:@"TBAIconCrossMark"];
-    return iconView;
-}
-
 #pragma mark Lifecycle
 
-- (instancetype)initWithCenter:(CGPoint)center radius:(CGFloat)radius {
-    CGRect frame = [self calculateFrameWithCenter:center radius:radius];
-    self = [super initWithFrame:frame];
+- (instancetype)initWithIdentifier:(NSString *)identifier {
+    self = [super init];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = NO;
         
-        _radius = radius;
         _borderType = TBAIconViewBorderTypeNone;
         _fillColor = [UIColor whiteColor];
         _strokeColor = [UIColor blackColor];
         _lineWidth = 2.0;
         _applyFill = NO;
+        
+        [self updateDataSource:identifier];
     }
     return self;
 }
@@ -64,21 +56,7 @@
     CGContextStrokePath(context);
 }
 
-#pragma mark Property Overrides
-
-- (void)setRadius:(CGFloat)radius {
-    if (_radius != radius) {
-        _radius = radius;
-        CGRect frame = [self calculateFrameWithCenter:self.center radius:_radius];
-        self.frame = frame;
-    }
-}
-
 #pragma mark Private
-
-- (CGRect)calculateFrameWithCenter:(CGPoint)center radius:(CGFloat)radius {
-    return CGRectMake(center.x-radius, center.y-radius, 2*radius, 2*radius);
-}
 
 - (void)updateDataSource:(NSString *)identifier {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:identifier ofType:@"plist"];
