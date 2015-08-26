@@ -29,7 +29,6 @@
     
         TBAIconView *iconView = [TBAIconView crossMarkIconView];
         iconView.translatesAutoresizingMaskIntoConstraints = NO;
-        iconView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         [self.contentView addSubview:iconView];
         self.iconView = iconView;
         

@@ -23,7 +23,7 @@
 #pragma mark Class Methods
 
 + (TBAIconView *)crossMarkIconView {
-    TBAIconView *iconView = [[TBAIconView  alloc] initWithCenter:CGPointZero radius:30.0];
+    TBAIconView *iconView = [[TBAIconView  alloc] initWithCenter:CGPointZero radius:0.0];
     [iconView updateDataSource:@"TBAIconCrossMark"];
     return iconView;
 }
@@ -34,6 +34,9 @@
     CGRect frame = [self calculateFrameWithCenter:center radius:radius];
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        self.clipsToBounds = NO;
+        
         _radius = radius;
         _borderType = TBAIconViewBorderTypeNone;
         _fillColor = [UIColor whiteColor];
@@ -48,8 +51,12 @@
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGFloat scale = rect.size.width;
+    CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
     for (UIBezierPath *bPath in self.bezierPaths) {
-        CGPathRef path = bPath.CGPath;
+        UIBezierPath *sPath = [UIBezierPath bezierPathWithCGPath:bPath.CGPath];
+        [sPath applyTransform:transform];
+        CGPathRef path = sPath.CGPath;
         CGContextAddPath(context, path);
     }
     CGContextSetLineWidth(context, self.lineWidth);
