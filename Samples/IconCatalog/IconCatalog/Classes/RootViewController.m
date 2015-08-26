@@ -50,6 +50,7 @@
 @interface RootViewController()
 @property (nonatomic, readwrite, readwrite) NSArray *iconIDs;
 @property (nonatomic, strong, readwrite) UIColor *strokeColor;
+@property (nonatomic, assign, readwrite) TBAIconViewBorderType borderType;
 @end
 
 #pragma mark - Public Implementation
@@ -66,6 +67,8 @@
     self = [super initWithCollectionViewLayout:layout];
     if (self) {
         self.iconIDs = @[TBAIconIdentifierCrossMark, TBAIconIdentifierPlus, TBAIconIdentifierMinus, TBAIconIdentifierLeftArrow, TBAIconIdentifierRightArrow, TBAIconIdentifierUpArrow, TBAIconIdentifierDownArrow, TBAIconIdentifierCheckMark];
+        self.borderType = TBAIconViewBorderTypeNone;
+        self.strokeColor = [UIColor blackColor];
     }
     return self;
 }
@@ -94,6 +97,15 @@
     [items addObject:flexItem];
     self.toolbarItems = items;
     self.navigationController.toolbarHidden = NO;
+    
+    NSArray *segItems = @[@"None", @"Square"];
+    UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:segItems];
+    for (NSInteger i=0; i<segControl.numberOfSegments; i++) {
+        [segControl setWidth:100.0 forSegmentAtIndex:i];
+    }
+    [segControl addTarget:self action:@selector(updateBorderType:) forControlEvents:UIControlEventValueChanged];
+    segControl.selectedSegmentIndex = self.borderType;
+    self.navigationItem.titleView = segControl;
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -114,6 +126,11 @@
     [self.collectionView reloadData];
 }
 
+- (void)updateBorderType:(UISegmentedControl *)control {
+    self.borderType = control.selectedSegmentIndex;
+    [self.collectionView reloadData];
+}
+
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -129,6 +146,7 @@
     NSString *iconID = self.iconIDs[indexPath.row];
     TBAIconView *iconView = cell.iconView;
     iconView.strokeColor = self.strokeColor;
+    iconView.borderType = self.borderType;
     [iconView updateDataSource:iconID];
     return cell;
 }

@@ -50,16 +50,39 @@ NSString *const TBAIconIdentifierCheckMark = @"TBAIconCheckMark";
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineWidth(context, self.lineWidth);
+    [self.strokeColor setStroke];
+    
+    switch (self.borderType) {
+        case TBAIconViewBorderTypeSquare: {
+            CGContextStrokeRect(context, rect);
+            break;
+        }
+        default:
+            break;
+    }
+    
+    CGFloat multiplier = 0.5;
     CGFloat scale = rect.size.width;
+    if (self.borderType != TBAIconViewBorderTypeNone) {
+        scale *= multiplier;
+    }
+
     CGAffineTransform transform = CGAffineTransformMakeScale(scale, scale);
+    
+    if (self.borderType != TBAIconViewBorderTypeNone) {
+        multiplier = 0.5*(1.0-multiplier);
+        CGAffineTransform translation = CGAffineTransformMakeTranslation(multiplier*rect.size.width, multiplier*rect.size.height);
+        transform = CGAffineTransformConcat(transform, translation);
+    }
+    
     for (UIBezierPath *bPath in self.bezierPaths) {
         UIBezierPath *sPath = [UIBezierPath bezierPathWithCGPath:bPath.CGPath];
         [sPath applyTransform:transform];
         CGPathRef path = sPath.CGPath;
         CGContextAddPath(context, path);
     }
-    CGContextSetLineWidth(context, self.lineWidth);
-    [self.strokeColor setStroke];
     CGContextStrokePath(context);
 }
 
