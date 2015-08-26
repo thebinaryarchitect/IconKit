@@ -49,6 +49,7 @@
 
 @interface RootViewController()
 @property (nonatomic, readwrite, readwrite) NSArray *iconIDs;
+@property (nonatomic, strong, readwrite) UIColor *strokeColor;
 @end
 
 #pragma mark - Public Implementation
@@ -76,6 +77,23 @@
     
     [self.collectionView registerClass:[_IconCell class] forCellWithReuseIdentifier:NSStringFromClass([_IconCell class])];
     [self updateLayout:self.collectionView.frame.size];
+
+    NSArray *colors = @[[UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor greenColor], [UIColor blueColor], [UIColor purpleColor], [UIColor brownColor], [UIColor blackColor]];
+
+    UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    NSMutableArray *items = [NSMutableArray array];
+    [items addObject:flexItem];
+    for (UIColor *color in colors) {
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
+        button.backgroundColor = color;
+        [button addTarget:self action:@selector(updateColor:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+        [items addObject:item];
+    }
+    [items addObject:flexItem];
+    self.toolbarItems = items;
+    self.navigationController.toolbarHidden = NO;
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -88,6 +106,11 @@
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
     CGFloat width = size.width / 4.0;
     layout.itemSize = CGSizeMake(width - 1.0, width - 1.0);
+    [self.collectionView reloadData];
+}
+
+- (void)updateColor:(UIButton *)button {
+    self.strokeColor = button.backgroundColor;
     [self.collectionView reloadData];
 }
 
@@ -104,7 +127,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     _IconCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([_IconCell class]) forIndexPath:indexPath];
     NSString *iconID = self.iconIDs[indexPath.row];
-    [cell.iconView updateDataSource:iconID];
+    TBAIconView *iconView = cell.iconView;
+    iconView.strokeColor = self.strokeColor;
+    [iconView updateDataSource:iconID];
     return cell;
 }
 
