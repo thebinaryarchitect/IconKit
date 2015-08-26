@@ -24,6 +24,7 @@ NSString *const TBAIconIdentifierPlus = @"TBAIconPlus";
 NSString *const TBAIconIdentifierLeftArrow = @"TBAIconLeftArrow";
 NSString *const TBAIconIdentifierRightArrow = @"TBAIconRightArrow";
 NSString *const TBAIconIdentifierUpArrow = @"TBAIconUpArrow";
+NSString *const TBAIconIdentifierDownArrow = @"TBAIconDownArrow";
 
 @implementation TBAIconView
 
