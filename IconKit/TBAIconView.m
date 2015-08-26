@@ -64,6 +64,12 @@ NSString *const TBAIconIdentifierCheckMark = @"TBAIconCheckMark";
             CGContextStrokeEllipseInRect(context, bounds);
             break;
         }
+        case TBAIconViewBorderTypeRoundedCorners: {
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:bounds cornerRadius:0.1*bounds.size.width];
+            CGContextAddPath(context, path.CGPath);
+            CGContextStrokePath(context);
+            break;
+        }
         default:
             break;
     }

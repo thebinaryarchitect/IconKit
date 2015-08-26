@@ -98,10 +98,10 @@
     self.toolbarItems = items;
     self.navigationController.toolbarHidden = NO;
     
-    NSArray *segItems = @[@"None", @"Square", @"Circle"];
+    NSArray *segItems = @[@"None", @"Square", @"Circle", @"Rounded Corners"];
     UISegmentedControl *segControl = [[UISegmentedControl alloc] initWithItems:segItems];
     for (NSInteger i=0; i<segControl.numberOfSegments; i++) {
-        [segControl setWidth:100.0 forSegmentAtIndex:i];
+        [segControl setWidth:125.0 forSegmentAtIndex:i];
     }
     [segControl addTarget:self action:@selector(updateBorderType:) forControlEvents:UIControlEventValueChanged];
     segControl.selectedSegmentIndex = self.borderType;

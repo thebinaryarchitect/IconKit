@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, TBAIconViewBorderType){
     TBAIconViewBorderTypeNone,
     TBAIconViewBorderTypeSquare,
     TBAIconViewBorderTypeCircle,
+    TBAIconViewBorderTypeRoundedCorners,
 };
 
 extern NSString *const TBAIconIdentifierCrossMark;
