@@ -13,6 +13,7 @@
 		137C25C31B8D293900CFB7F8 /* TBAIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 137C25C11B8D293900CFB7F8 /* TBAIconView.h */; };
 		137C25C41B8D293900CFB7F8 /* TBAIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 137C25C21B8D293900CFB7F8 /* TBAIconView.m */; };
 		137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */; };
+		137C25D71B8D443800CFB7F8 /* TBAIconPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		137C25C11B8D293900CFB7F8 /* TBAIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAIconView.h; sourceTree = "<group>"; };
 		137C25C21B8D293900CFB7F8 /* TBAIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAIconView.m; sourceTree = "<group>"; };
 		137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconCrossMark.plist; sourceTree = "<group>"; };
+		137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TBAIconPlus.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				137C25C11B8D293900CFB7F8 /* TBAIconView.h */,
 				137C25C21B8D293900CFB7F8 /* TBAIconView.m */,
 				137C25CF1B8D30FF00CFB7F8 /* TBAIconCrossMark.plist */,
+				137C25D61B8D443800CFB7F8 /* TBAIconPlus.plist */,
 				137C256B1B8D269D00CFB7F8 /* Supporting Files */,
 			);
 			path = IconKit;
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137C25D01B8D30FF00CFB7F8 /* TBAIconCrossMark.plist in Resources */,
+				137C25D71B8D443800CFB7F8 /* TBAIconPlus.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +414,7 @@
 				137C25801B8D269D00CFB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		137C25811B8D269D00CFB7F8 /* Build configuration list for PBXNativeTarget "IconKitTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				137C25831B8D269D00CFB7F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
