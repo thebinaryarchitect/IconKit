@@ -56,7 +56,7 @@
     CGContextStrokePath(context);
 }
 
-#pragma mark Private
+#pragma mark Public
 
 - (void)updateDataSource:(NSString *)identifier {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:identifier ofType:@"plist"];

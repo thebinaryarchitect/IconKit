@@ -66,4 +66,11 @@ typedef NS_ENUM(NSInteger, TBAIconViewBorderType){
  */
 - (instancetype)initWithIdentifier:(NSString *)identifier;
 
+/**
+ *  Causes the view to redraw with the icon associated with the identifier.
+ *
+ *  @param identifier The identifier.
+ */
+- (void)updateDataSource:(NSString *)identifier;
+
 @end
