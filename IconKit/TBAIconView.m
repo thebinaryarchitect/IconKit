@@ -22,6 +22,14 @@
 
 #pragma mark Lifecycle
 
+- (instancetype)init {
+    return [self initWithIdentifier:@"TBAIconCrossMark"];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    return [self initWithIdentifier:@"TBAIconCrossMark"];
+}
+
 - (instancetype)initWithIdentifier:(NSString *)identifier {
     self = [super init];
     if (self) {
