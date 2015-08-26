@@ -25,6 +25,7 @@ extern NSString *const TBAIconIdentifierMinus;
 extern NSString *const TBAIconIdentifierPlus;
 extern NSString *const TBAIconIdentifierLeftArrow;
 extern NSString *const TBAIconIdentifierRightArrow;
+extern NSString *const TBAIconIdentifierUpArrow;
 
 #pragma mark - Public Interface
 
