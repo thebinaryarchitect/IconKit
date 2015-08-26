@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, TBAIconViewBorderType){
 };
 
 extern NSString *const TBAIconIdentifierCrossMark;
+extern NSString *const TBAIconIdentifierPlus;
 
 #pragma mark - Public Interface
 

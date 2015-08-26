@@ -19,6 +19,7 @@
 #pragma mark - Public Implementation
 
 NSString *const TBAIconIdentifierCrossMark = @"TBAIconCrossMark";
+NSString *const TBAIconIdentifierPlus = @"TBAIconPlus";
 
 @implementation TBAIconView
 
